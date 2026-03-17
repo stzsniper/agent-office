@@ -37,48 +37,15 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #283c7d;
   }
+
+  body {
+    background: #04060d;
+    color: #f0f1f5;
+  }
 }
 
 @layer components {
   .glass-card {
     @apply bg-midnight-800/60 backdrop-blur-xl border border-midnight-600/30 rounded-xl;
-  }
-  
-  .neon-border {
-    @apply border border-neon-green/20 shadow-[0_0_15px_rgba(0,255,136,0.1)];
-  }
-
-  .status-dot {
-    @apply w-2.5 h-2.5 rounded-full inline-block;
-  }
-
-  .status-idle {
-    @apply bg-neon-green shadow-[0_0_8px_rgba(0,255,136,0.6)];
-  }
-
-  .status-busy {
-    @apply bg-neon-yellow shadow-[0_0_8px_rgba(255,215,0,0.6)] animate-pulse;
-  }
-
-  .status-error {
-    @apply bg-neon-red shadow-[0_0_8px_rgba(255,51,102,0.6)];
-  }
-
-  .status-offline {
-    @apply bg-midnight-400;
-  }
-
-  .btn-action {
-    @apply px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200
-           bg-midnight-700/80 border border-midnight-500/50 text-midnight-100
-           hover:bg-midnight-600/80 hover:border-neon-green/30 hover:text-neon-green
-           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-
-  .btn-primary {
-    @apply px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200
-           bg-neon-green/10 border border-neon-green/30 text-neon-green
-           hover:bg-neon-green/20 hover:shadow-[0_0_15px_rgba(0,255,136,0.2)]
-           active:scale-95;
   }
 }
