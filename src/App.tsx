@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Sidebar, Screen } from '@/components/Sidebar';
 import { TopBar } from '@/components/TopBar';
 import { DashboardScreen } from '@/screens/DashboardScreen';
+import { OfficeScreen } from '@/screens/OfficeScreen';
 import { TasksScreen } from '@/screens/TasksScreen';
 import { ContentScreen } from '@/screens/ContentScreen';
 import { CalendarScreen } from '@/screens/CalendarScreen';
@@ -23,6 +24,7 @@ const queryClient = new QueryClient({
 
 const SCREEN_TITLES: Record<Screen, { title: string; subtitle: string }> = {
   dashboard: { title: 'Dashboard', subtitle: 'Overview of all agent activity' },
+  office: { title: 'Office', subtitle: 'Virtual agent workspace — click desks for details' },
   tasks: { title: 'Tasks Board', subtitle: 'Manage and track all tasks' },
   content: { title: 'Content Pipeline', subtitle: 'Plan and publish content' },
   calendar: { title: 'Calendar', subtitle: 'Schedule and events' },
@@ -35,6 +37,7 @@ const SCREEN_TITLES: Record<Screen, { title: string; subtitle: string }> = {
 function ScreenRouter({ screen }: { screen: Screen }) {
   switch (screen) {
     case 'dashboard': return <DashboardScreen />;
+    case 'office': return <OfficeScreen />;
     case 'tasks': return <TasksScreen />;
     case 'content': return <ContentScreen />;
     case 'calendar': return <CalendarScreen />;

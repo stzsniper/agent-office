@@ -11,11 +11,13 @@ import {
   ChevronLeft,
   ChevronRight,
   Building2,
+  Building,
 } from 'lucide-react';
 import { useState } from 'react';
 
 export type Screen =
   | 'dashboard'
+  | 'office'
   | 'tasks'
   | 'content'
   | 'calendar'
@@ -31,6 +33,7 @@ interface SidebarProps {
 
 const NAV_ITEMS: { id: Screen; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { id: 'office', label: 'Office', icon: Building },
   { id: 'tasks', label: 'Tasks Board', icon: ListTodo },
   { id: 'content', label: 'Content Pipeline', icon: Film },
   { id: 'calendar', label: 'Calendar', icon: Calendar },
